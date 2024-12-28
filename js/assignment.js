@@ -9,13 +9,12 @@ const responseParagraph = document.getElementById('response');
     let age;
 
 
-
 function checkAgeAndRespond() {
     age = parseInt(ageInputEl.value);
     
     // Write your code below
 
-if (ageInputEl.value >= 18 && ageInputEl.value < 21) {
+if (ageInputEl.value >= 18) {
     console.log("You can vote, but you cannot purchase alcohol.");
     }
 if (ageInputEl.value >= 21) {
@@ -24,9 +23,9 @@ if (ageInputEl.value >= 21) {
 else {
     console.log("You cannot vote nor purchase alcohol. You are too young!");
 }
-}
-
-
+  }  /*Question - Why for age < 21 the logic gives two output? 
+    
+      */
 submissionBtn.addEventListener("click", function () {
     checkAgeAndRespond();
 });
